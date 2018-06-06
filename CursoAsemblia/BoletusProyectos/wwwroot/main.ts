@@ -1,5 +1,5 @@
 function getProject():Promise<Response>{
-    return fetch('http://fysegplannerwebapi.fyseg.com/api/proyect/P0001634');
+    return fetch('http://fysegplannerwebapi.fyseg.com/api/project/P0001634');
 }
 
 getProject().then(response=>{

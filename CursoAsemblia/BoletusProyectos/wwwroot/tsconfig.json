@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "strict": true,
+        "lib": [
+            "dom",
+            "es2015"
+        ],
+        "module": "es2015",
+        "target": "es2015"
+
+    }
+}

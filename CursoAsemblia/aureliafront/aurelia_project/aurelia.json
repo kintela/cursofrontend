@@ -7,7 +7,7 @@
   },
   "build": {
     "options": {
-      "server": "dev",
+      "server": false,
       "extractCss": "prod",
       "coverage": false
     }

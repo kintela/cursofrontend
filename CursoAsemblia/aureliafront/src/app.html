@@ -18,5 +18,25 @@
   </div>
   <div class="container">
     <message title.bind="welcomeTitle" cursive.bind="true"></message>
+
+    <h3>Se han cargado ${proyectos.length}</h3>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Name</th>
+          <th scope="col">Wprk Start date</th>
+          <th scope="col">Tender Budget</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr repeat.for="project of proyectos">
+          <td><b>${project.id}</b></td>
+          <td>${project.name}</td>
+          <td>${project.workStartDate}</td>
+          <td>${project.tenderBudget}</td>
+        </tr>
+      </tbody> 
+    </table>
   </div>
 </template>

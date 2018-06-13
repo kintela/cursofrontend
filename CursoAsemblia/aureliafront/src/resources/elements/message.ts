@@ -1,3 +1,6 @@
+import { bindable } from "aurelia-framework";
+
 export class Message{
-  message:string="Hola mundo";
+  @bindable
+  title:string="titulo por defecto";
 }

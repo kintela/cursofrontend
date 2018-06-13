@@ -637,9 +637,9 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
   !*** ./src/app.html ***!
   \**********************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = \"<template>\\n  <h1>${message}</h1>\\n</template>\\n\";//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYXBwLmh0bWwuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvYXBwLmh0bWw/NDVhYiJdLCJzb3VyY2VzQ29udGVudCI6WyJtb2R1bGUuZXhwb3J0cyA9IFwiPHRlbXBsYXRlPlxcbiAgPGgxPiR7bWVzc2FnZX08L2gxPlxcbjwvdGVtcGxhdGU+XFxuXCI7Il0sIm1hcHBpbmdzIjoiQUFBQSIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///app.html\n");
+eval("module.exports = \"<template>\\n  <require from=\\\"./message\\\"></require>\\n  <message></message>\\n</template>\\n\";//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYXBwLmh0bWwuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvYXBwLmh0bWw/NDVhYiJdLCJzb3VyY2VzQ29udGVudCI6WyJtb2R1bGUuZXhwb3J0cyA9IFwiPHRlbXBsYXRlPlxcbiAgPHJlcXVpcmUgZnJvbT1cXFwiLi9tZXNzYWdlXFxcIj48L3JlcXVpcmU+XFxuICA8bWVzc2FnZT48L21lc3NhZ2U+XFxuPC90ZW1wbGF0ZT5cXG5cIjsiXSwibWFwcGluZ3MiOiJBQUFBIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///app.html\n");
 
 /***/ }),
 
@@ -1012,6 +1012,29 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"configure\", function() { return configure; });\n/* harmony import */ var _environment__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./environment */ \"./src/environment.ts\");\n/* harmony import */ var aurelia_pal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! aurelia-pal */ \"./node_modules/aurelia-pal/dist/native-modules/aurelia-pal.js\");\n/* harmony import */ var bluebird__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! bluebird */ \"./node_modules/bluebird/js/browser/bluebird.js-exposed\");\n/* harmony import */ var bluebird__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(bluebird__WEBPACK_IMPORTED_MODULE_2__);\n\r\n\r\n\r\n// remove out if you don't want a Promise polyfill (remove also from webpack.config.js)\r\nbluebird__WEBPACK_IMPORTED_MODULE_2__[\"config\"]({ warnings: { wForgottenReturn: false } });\r\nfunction configure(aurelia) {\r\n    aurelia.use\r\n        .standardConfiguration()\r\n        .feature('resources/index');\r\n    // Uncomment the line below to enable animation.\r\n    // aurelia.use.plugin(PLATFORM.moduleName('aurelia-animator-css'));\r\n    // if the css animator is enabled, add swap-order=\"after\" to all router-view elements\r\n    // Anyone wanting to use HTMLImports to load views, will need to install the following plugin.\r\n    // aurelia.use.plugin(PLATFORM.moduleName('aurelia-html-import-template-loader'));\r\n    if (_environment__WEBPACK_IMPORTED_MODULE_0__[\"default\"].debug) {\r\n        aurelia.use.developmentLogging();\r\n    }\r\n    if (_environment__WEBPACK_IMPORTED_MODULE_0__[\"default\"].testing) {\r\n        aurelia.use.plugin('aurelia-testing');\r\n    }\r\n    aurelia.start().then(function () { return aurelia.setRoot('app'); });\r\n}\r\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibWFpbi5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy8uL3NyYy9tYWluLnRzP2NkNDkiXSwic291cmNlc0NvbnRlbnQiOlsiLy8vIDxyZWZlcmVuY2UgdHlwZXM9XCJhdXJlbGlhLWxvYWRlci13ZWJwYWNrL3NyYy93ZWJwYWNrLWhvdC1pbnRlcmZhY2VcIi8+XG4vLyB3ZSB3YW50IGZvbnQtYXdlc29tZSB0byBsb2FkIGFzIHNvb24gYXMgcG9zc2libGUgdG8gc2hvdyB0aGUgZmEtc3Bpbm5lclxuaW1wb3J0IHtBdXJlbGlhfSBmcm9tICdhdXJlbGlhLWZyYW1ld29yaydcbmltcG9ydCBlbnZpcm9ubWVudCBmcm9tICcuL2Vudmlyb25tZW50JztcbmltcG9ydCB7UExBVEZPUk19IGZyb20gJ2F1cmVsaWEtcGFsJztcbmltcG9ydCAqIGFzIEJsdWViaXJkIGZyb20gJ2JsdWViaXJkJztcblxuLy8gcmVtb3ZlIG91dCBpZiB5b3UgZG9uJ3Qgd2FudCBhIFByb21pc2UgcG9seWZpbGwgKHJlbW92ZSBhbHNvIGZyb20gd2VicGFjay5jb25maWcuanMpXG5CbHVlYmlyZC5jb25maWcoeyB3YXJuaW5nczogeyB3Rm9yZ290dGVuUmV0dXJuOiBmYWxzZSB9IH0pO1xuXG5leHBvcnQgZnVuY3Rpb24gY29uZmlndXJlKGF1cmVsaWE6IEF1cmVsaWEpIHtcbiAgYXVyZWxpYS51c2VcbiAgICAuc3RhbmRhcmRDb25maWd1cmF0aW9uKClcbiAgICAuZmVhdHVyZShQTEFURk9STS5tb2R1bGVOYW1lKCdyZXNvdXJjZXMvaW5kZXgnKSk7XG5cbiAgLy8gVW5jb21tZW50IHRoZSBsaW5lIGJlbG93IHRvIGVuYWJsZSBhbmltYXRpb24uXG4gIC8vIGF1cmVsaWEudXNlLnBsdWdpbihQTEFURk9STS5tb2R1bGVOYW1lKCdhdXJlbGlhLWFuaW1hdG9yLWNzcycpKTtcbiAgLy8gaWYgdGhlIGNzcyBhbmltYXRvciBpcyBlbmFibGVkLCBhZGQgc3dhcC1vcmRlcj1cImFmdGVyXCIgdG8gYWxsIHJvdXRlci12aWV3IGVsZW1lbnRzXG5cbiAgLy8gQW55b25lIHdhbnRpbmcgdG8gdXNlIEhUTUxJbXBvcnRzIHRvIGxvYWQgdmlld3MsIHdpbGwgbmVlZCB0byBpbnN0YWxsIHRoZSBmb2xsb3dpbmcgcGx1Z2luLlxuICAvLyBhdXJlbGlhLnVzZS5wbHVnaW4oUExBVEZPUk0ubW9kdWxlTmFtZSgnYXVyZWxpYS1odG1sLWltcG9ydC10ZW1wbGF0ZS1sb2FkZXInKSk7XG5cbiAgaWYgKGVudmlyb25tZW50LmRlYnVnKSB7XG4gICAgYXVyZWxpYS51c2UuZGV2ZWxvcG1lbnRMb2dnaW5nKCk7XG4gIH1cblxuICBpZiAoZW52aXJvbm1lbnQudGVzdGluZykge1xuICAgIGF1cmVsaWEudXNlLnBsdWdpbihQTEFURk9STS5tb2R1bGVOYW1lKCdhdXJlbGlhLXRlc3RpbmcnKSk7XG4gIH1cblxuICBhdXJlbGlhLnN0YXJ0KCkudGhlbigoKSA9PiBhdXJlbGlhLnNldFJvb3QoUExBVEZPUk0ubW9kdWxlTmFtZSgnYXBwJykpKTtcbn1cbiJdLCJtYXBwaW5ncyI6IkFBR0E7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFDQTtBQUNBO0FBRUE7QUFDQTtBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBRUE7QUFDQTtBQUNBO0FBRUE7QUFDQTtBQUVBO0FBQ0E7QUFDQTtBQUVBO0FBQ0E7QUFDQTtBQUVBO0FBQ0E7Iiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///main\n");
+
+/***/ }),
+
+/***/ "message":
+/*!************************!*\
+  !*** ./src/message.ts ***!
+  \************************/
+/*! exports provided: Message */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"Message\", function() { return Message; });\nvar Message = /** @class */ (function () {\r\n    function Message() {\r\n        this.message = \"Hola mundo\";\r\n    }\r\n    return Message;\r\n}());\r\n\r\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibWVzc2FnZS5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy8uL3NyYy9tZXNzYWdlLnRzPzczYmYiXSwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IGNsYXNzIE1lc3NhZ2V7XG4gIG1lc3NhZ2U6c3RyaW5nPVwiSG9sYSBtdW5kb1wiO1xufVxuIl0sIm1hcHBpbmdzIjoiQUFBQTtBQUFBO0FBQUE7QUFBQTtBQUNBO0FBQ0E7QUFBQTtBQUFBOzsiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///message\n");
+
+/***/ }),
+
+/***/ "message.html":
+/*!**************************!*\
+  !*** ./src/message.html ***!
+  \**************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"<template>\\n  <h1>${message}</h1>\\n</template>  \\n\";//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibWVzc2FnZS5odG1sLmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vc3JjL21lc3NhZ2UuaHRtbD81MmNlIl0sInNvdXJjZXNDb250ZW50IjpbIm1vZHVsZS5leHBvcnRzID0gXCI8dGVtcGxhdGU+XFxuICA8aDE+JHttZXNzYWdlfTwvaDE+XFxuPC90ZW1wbGF0ZT4gIFxcblwiOyJdLCJtYXBwaW5ncyI6IkFBQUEiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///message.html\n");
 
 /***/ }),
 

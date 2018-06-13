@@ -1,3 +1,4 @@
 <template>
-  <h1>${title}</h1>
+  <h1 if.bind="!cursive">${title}</h1>
+  <h1 if.bind="cursive"><i>${title}</i></h1>
 </template>  

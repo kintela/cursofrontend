@@ -30,7 +30,7 @@ module.exports = ({production, server, extractCss, coverage, analyze} = {}) => (
   },
   entry: {
     app: ['aurelia-bootstrapper'],
-    vendor: ['bluebird'],
+    vendor: ['bluebird','bootstrap'],
   },
   mode: production ? 'production' : 'development',
   output: {

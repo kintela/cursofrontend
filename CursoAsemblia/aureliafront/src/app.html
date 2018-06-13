@@ -25,7 +25,8 @@
         <tr>
           <th scope="col">Id</th>
           <th scope="col">Name</th>
-          <th scope="col">Wprk Start date</th>
+          <th scope="col">Customer Code</th>
+          <th scope="col">Work Start date</th>
           <th scope="col">Tender Budget</th>
         </tr>
       </thead>
@@ -33,6 +34,7 @@
         <tr repeat.for="project of proyectos">
           <td><b>${project.id}</b></td>
           <td>${project.name}</td>
+          <td>${project.customerCode}</td>
           <td>${project.workStartDate}</td>
           <td>${project.tenderBudget}</td>
         </tr>

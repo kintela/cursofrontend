@@ -23,8 +23,10 @@
 
     <h3>Se han cargado ${proyectos.length}</h3>
 
-    <input type="text" class="form-control col-md-2 search-box" value.bind="searchTerm" placeholder="search..."></input>
-
+    <div class="row">
+      <input type="text" value.bind="filter"></input>
+    </div>
+    
     <table class="table">
       <thead>
         <tr>

@@ -24,7 +24,7 @@
     <h3>Se han cargado ${proyectos.length}</h3>
 
     <div class="row">
-      <input type="text" value.bind="filter"></input>
+      <input type="text" value.bind="filter & debounce:850"></input>
     </div>
     
     <table class="table">

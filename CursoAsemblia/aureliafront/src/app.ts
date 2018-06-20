@@ -22,8 +22,15 @@ export class App {
 
   filterChanged(value,oldValue){
     console.log(`filtrando por: ${value}`);
+    this.aplicarFiltro(value);
+  }
 
-    const proyectosEncontrados=this.proyectosOriginales.filter(p=>(<string>p.id).startsWith(value));
+  filtrar(){
+    this.aplicarFiltro(this.filter);
+  }
+
+  private aplicarFiltro(valor){
+    const proyectosEncontrados=this.proyectosOriginales.filter(p=>(<string>p.id).startsWith(valor));
 
     this.proyectosFiltrados.splice(0,this.proyectosFiltrados.length,...proyectosEncontrados);    
   }

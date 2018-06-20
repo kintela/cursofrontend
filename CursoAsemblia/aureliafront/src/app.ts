@@ -1,6 +1,8 @@
 import "bootstrap";
 import { HttpClient } from "aurelia-fetch-client";
 import { observable } from "aurelia-binding";
+
+
 export class App {
   welcomeTitle = "Bienvenido a Proyectos";
   proyectosOriginales: any[] = [];

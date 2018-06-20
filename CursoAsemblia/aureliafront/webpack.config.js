@@ -38,7 +38,7 @@ module.exports = ({
   },
   entry: {
     app: ["aurelia-bootstrapper"],
-    vendor: ["bluebird", "bootstrap", "aurelia-fetch-client"]
+    vendor: ["bluebird", "bootstrap", "aurelia-fetch-client","moment","numeral"]
   },
   mode: production ? "production" : "development",
   output: {

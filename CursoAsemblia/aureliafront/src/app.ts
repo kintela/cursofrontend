@@ -14,14 +14,16 @@ export class App {
       .then(proy => {
         this.proyectos.push(...proy);
       });
-  }
+  } 
+}
 
-  filterFunc(searchExpression, value) {
-    let itemValue = value.text;
-    if (!searchExpression || !itemValue) return false;
-
-    return (
-      itemValue.toUpperCase().indexOf(searchExpression.toUpperCase()) !== -1
-    );
-  }
+export class filtroProyectoIdValueConverter{
+  toView(proyectos,filtro){
+    if(filtro!=undefined){
+      return proyectos.filter(proyecto=>proyecto.id.toUpperCase().startsWith(filtro.toUpperCase()));
+    }
+    else{
+      return proyectos;
+    }
+  };
 }

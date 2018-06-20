@@ -1,6 +1,8 @@
 <template>
   <require from="bootstrap/dist/css/bootstrap.min.css"></require>
   <require from="resources/elements/filterValueConverter"></require>
+  <require from="resources/value-converters/formatDateValueConverter"></require>
+  <require from="resources/value-converters/formatNumberValueConverter"></require>
 
   <div class="navbar navbar-expand-md navbar-dark bg-dark">
     <a class="navbar-brand" href="#">Proyectos boletus</a>
@@ -45,8 +47,8 @@
           </td>
           <td>${project.name}</td>
           <td>${project.customerCode}</td>
-          <td>${project.workStartDate}</td>
-          <td>${project.tenderBudget}</td>
+          <td>${project.workStartDate | formatDate:'DD/MM/YYYY HH:mm:SS'}</td>
+          <td>${project.tenderBudget | formatNumber:'0.00'}</td>
         </tr>
       </tbody>
     </table>

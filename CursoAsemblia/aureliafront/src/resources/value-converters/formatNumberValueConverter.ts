@@ -14,7 +14,7 @@ export class formatNumberValueConverter {
   }
 
   private isNumeral(value) : value is Numeral {
-    return value.isNumeral === true;
+    return (<any>numeral).isNumeral(value);
   }
 }
 

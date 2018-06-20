@@ -3,7 +3,8 @@ import { HttpClient } from "aurelia-fetch-client";
 import { observable } from "aurelia-binding";
 export class App {
   welcomeTitle = "Bienvenido a Proyectos";
-  proyectos: any[] = [];
+  proyectosOriginales: any[] = [];
+  proyectosFiltrados: any[] = [];
   @observable()
   filter:string=null;
 
@@ -14,16 +15,17 @@ export class App {
       .fetch("http://fysegplannerwebapi.fyseg.com/api/projects")
       .then(r => r.json())
       .then(proy => {
-        this.proyectos.push(...proy);
+        this.proyectosOriginales.push(...proy);
+        this.proyectosFiltrados.push(...proy);
       });
   } 
 
   filterChanged(value,oldValue){
-    const proyectosFiltrados=this.proyectos.filter(p=>(<string>p.id).startsWith(value));
+    console.log(`filtrando por: ${value}`);
 
-    this.proyectos.splice(0,this.proyectos.length);
+    const proyectosEncontrados=this.proyectosOriginales.filter(p=>(<string>p.id).startsWith(value));
 
-    this.proyectos.push(...proyectosFiltrados);
+    this.proyectosFiltrados.splice(0,this.proyectosFiltrados.length,...proyectosEncontrados);    
   }
 }
 

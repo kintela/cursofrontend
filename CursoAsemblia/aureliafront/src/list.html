@@ -1,21 +1,4 @@
 <template>
-  <div class="navbar navbar-expand-md navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Proyectos boletus</a>
-    <button class="navbar-toggler" type="button" data-target="#navbar" data-toggle="collapse">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Página 2</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <div class="container">
     <message title.bind="welcomeTitle" cursive.bind="true"></message>
 
     <h3>Se han cargado ${proyectos.length}</h3>
@@ -50,5 +33,4 @@
         </tr>
       </tbody>
     </table>
-  </div>
 </template>

@@ -7,6 +7,6 @@ export function configure(config: FrameworkConfiguration) {
     PLATFORM.moduleName("./elements/navBar"),
     PLATFORM.moduleName("./value-converters/formatDateValueConverter"),
     PLATFORM.moduleName("./value-converters/formatNumberValueConverter"),
-    PLATFORM.moduleName("./elemens/navBar")
+    PLATFORM.moduleName("./elements/navBar")
   ]);
 }

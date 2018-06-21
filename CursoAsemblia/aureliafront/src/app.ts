@@ -8,7 +8,7 @@ export class App {
 
     config.map([
       //ruta por defecto que pueden ser varias
-      {route:['','list'], name:'list', moduleId:PLATFORM.moduleName('./list') },
+      {route:['','list'], name:'list', moduleId:PLATFORM.moduleName('./list') , nav:true, title:'Proyectos'},
       {route:'edit/:id', name:'edit', moduleId:PLATFORM.moduleName('./edit') },
     ]);
   }  

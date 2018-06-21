@@ -1,6 +1,6 @@
 import { HttpClient } from "aurelia-fetch-client";
 import { observable } from "aurelia-binding";
-import { Proyecto } from "resources/proyecto";
+import { Proyecto } from "./resources/proyecto";
 
 
 export class List {

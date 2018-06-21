@@ -1,13 +1,12 @@
 <template>
+    <require from="./filter"></require>
+
     <message title.bind="welcomeTitle" cursive.bind="true"></message>
 
     <h3>Se han cargado ${proyectos.length}</h3>
 
-    <div class="row">
-      <input type="text" value.bind="filter & debounce:850"></input>
-      <button type="button" class="btn btn-default" click.trigger="filtrar()">Filtrar</button>
-    </div>
-
+    <filter></filter>
+    
     <table class="table">
       <thead>
         <tr>

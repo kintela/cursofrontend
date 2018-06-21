@@ -1,6 +1,7 @@
 import * as moment from "moment";
 import * as numeral from "numeral";
 import { Moment } from "moment";
+import { computedFrom} from 'aurelia-binding';
 
 export class Proyecto {
   constructor(json: any) {
@@ -19,6 +20,7 @@ export class Proyecto {
   customerCode: string;
   tenderBudget: Numeral;
   
+  @computedFrom('id','customerCode')
   get uniqueIdentifier():string{
     return this.id + "-" + this.customerCode
   }

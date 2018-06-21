@@ -1,8 +1,10 @@
+import { ProyectosService } from './../services/proyectosService';
 import { HttpClient } from "aurelia-fetch-client";
 import { observable } from "aurelia-binding";
 import { Proyecto } from "../models/proyecto";
+import { inject } from 'aurelia-framework';
 
-
+@inject(ProyectosService)
 export class List {
   welcomeTitle = "Bienvenido a Proyectos";
   proyectosOriginales: Proyecto[] = [];
@@ -10,17 +12,14 @@ export class List {
   @observable()
   filter:string=null;
 
-  constructor() {
+  constructor(private proyectosService:ProyectosService) {
     const http = new HttpClient();
 
-    http
-      .fetch("http://fysegplannerwebapi.fyseg.com/api/projects")
-      .then(r => r.json())
-      .then((json:any[]) =>json.map(p=>new Proyecto(p))) 
+    this.proyectosService.getProyectos()
       .then(proyectos=>{
         this.proyectosOriginales.push(...proyectos);
         this.proyectosFiltrados.push(...proyectos);
-      });
+      })
   } 
 
   filterChanged(value,oldValue){

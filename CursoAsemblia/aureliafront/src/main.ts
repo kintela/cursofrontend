@@ -1,9 +1,11 @@
+import { HttpClient } from 'aurelia-fetch-client';
 /// <reference types="aurelia-loader-webpack/src/webpack-hot-interface"/>
 // we want font-awesome to load as soon as possible to show the fa-spinner
 import {Aurelia} from 'aurelia-framework'
 import environment from './environment';
 import {PLATFORM} from 'aurelia-pal';
 import * as Bluebird from 'bluebird';
+import { ENETDOWN } from 'constants';
 
 // remove out if you don't want a Promise polyfill (remove also from webpack.config.js)
 Bluebird.config({ warnings: { wForgottenReturn: false } });
@@ -30,5 +32,21 @@ export function configure(aurelia: Aurelia) {
     aurelia.use.plugin(PLATFORM.moduleName('aurelia-testing'));
   }
 
+  configureHttpClient(aurelia);
+  
   aurelia.start().then(() => aurelia.setRoot(PLATFORM.moduleName('app')));
+}
+
+function configureHttpClient(aurelia:Aurelia){
+  const httpClient:HttpClient=aurelia.container.get(HttpClient);
+
+  httpClient.configure(config=>{
+    config.withBaseUrl('http://fysegplannerwebapi.fyseg.com/api/');
+    config.withInterceptor({
+      response:(response)=>{
+        console.log(response.status);
+        return response;
+      }
+    })
+  });
 }

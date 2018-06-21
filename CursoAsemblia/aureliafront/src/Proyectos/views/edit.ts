@@ -1,23 +1,23 @@
 import { Proyecto} from '../models/proyecto';
 import { HttpClient } from "aurelia-fetch-client";
+import { ProyectosService } from '../services/proyectosService';
+import { inject } from 'aurelia-framework';
 
 interface EditParams{
   id:string;
 }
 
+@inject(ProyectosService)
 export class Edit{
   proyecto:Proyecto;
   http:HttpClient;
 
-  constructor() {
-    this.http = new HttpClient();   
+  constructor(private proyectosService:ProyectosService) {
+    
   } 
 
   activate(params:EditParams){
-    this.http.fetch(`http://fysegplannerwebapi.fyseg.com/api/projects/${params.id}`)
-    .then(r => r.json())
-    .then(json=>{
-      this.proyecto=new Proyecto(json);
-    });
+    this.proyectosService.getProyecto(params.id)
+      .then(proy=>this.proyecto=proy);
   }
 }

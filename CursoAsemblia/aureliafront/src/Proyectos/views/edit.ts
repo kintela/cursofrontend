@@ -1,4 +1,4 @@
-import { Proyecto} from './resources/proyecto';
+import { Proyecto} from '../models/proyecto';
 import { HttpClient } from "aurelia-fetch-client";
 
 interface EditParams{

@@ -37,6 +37,7 @@
           <th scope="col">Customer Code</th>
           <th scope="col">Work Start date</th>
           <th scope="col">Tender Budget</th>
+          <th scope="col">customer + Id</th>
         </tr>
       </thead>
       <tbody>
@@ -48,6 +49,7 @@
           <td>${project.customerCode}</td>
           <td>${project.workStartDate | formatDate:'DD/MM/YYYY HH:mm:SS'}</td>
           <td>${project.tenderBudget | formatNumber:'0.00'}</td>
+          <td>${project.customerCodePlusId}</td>
         </tr>
       </tbody>
     </table>

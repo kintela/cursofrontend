@@ -1,1 +1,3 @@
-export class NavBar {}
+export class NavBar {
+  
+}

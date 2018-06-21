@@ -1,7 +1,10 @@
+import { ProyectosService } from './services/proyectosService';
 import { Router } from 'aurelia-router';
 import { FrameworkConfiguration, PLATFORM } from 'aurelia-framework';
 
 export function configure(config: FrameworkConfiguration){
+  config.container.registerSingleton(ProyectosService);
+  
   let router:Router=config.container.get(Router);
 
   router.addRoute({

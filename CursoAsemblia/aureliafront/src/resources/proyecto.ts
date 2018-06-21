@@ -11,7 +11,6 @@ export class Proyecto {
     Object.assign(this, json, {
       workStartDate: moment(json.workStartDate, "YYYY-MM-DD"),
       tenderBudget: numeral(json.tenderBudget),
-      uniqueIdentifier: json.customerCode + " " + json.id
     });
   }
   id: string;
@@ -19,5 +18,8 @@ export class Proyecto {
   workStartDate: Moment;
   customerCode: string;
   tenderBudget: Numeral;
-  uniqueIdentifier:string;
+  
+  get uniqueIdentifier():string{
+    return this.id + "-" + this.customerCode
+  }
 }

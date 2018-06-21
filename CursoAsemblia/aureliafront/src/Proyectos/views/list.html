@@ -3,9 +3,9 @@
 
     <message title.bind="welcomeTitle" cursive.bind="true"></message>
 
-    <h3>Se han cargado ${proyectos.length}</h3>
+    <h3>Se han encontrado ${proyectosFiltrados.length}</h3>
 
-    <filter></filter>
+    <filter proyectos-originales.bind="proyectosOriginales" proyectos-filtrados.bind="proyectosFiltrados"></filter>
     
     <table class="table">
       <thead>

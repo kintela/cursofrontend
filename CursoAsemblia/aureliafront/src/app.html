@@ -1,7 +1,7 @@
 <template>
   <require from="bootstrap/dist/css/bootstrap.min.css"></require>
-  <require from="resources/value-converters/formatDateValueConverter"></require>
-  <require from="resources/value-converters/formatNumberValueConverter"></require>
+  <!--<require from="resources/value-converters/formatDateValueConverter"></require>
+  <require from="resources/value-converters/formatNumberValueConverter"></require>-->
 
   <div class="navbar navbar-expand-md navbar-dark bg-dark">
     <a class="navbar-brand" href="#">Proyectos boletus</a>
@@ -28,7 +28,7 @@
       <input type="text" value.bind="filter & debounce:850"></input>
       <button type="button" class="btn btn-default" click.trigger="filtrar()">Filtrar</button>
     </div>
-    
+
     <table class="table">
       <thead>
         <tr>
